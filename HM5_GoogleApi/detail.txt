@@ -1,0 +1,19 @@
+Application should show a single GridView that displays data in two columns.
+Grid items should show titles of books and an image of the book.
+Images displayed on grid items should come from the Google Books API and should be displayed with the help of a library such as SmartImageView or Picasso.
+Networking:
+
+Application should pull down data from the Google Books API using a URLConnection or appropriate subclass.
+Application should utilize a stream reading library, such as the Apache commons-io library, to pull data from the connection's InputStream.
+NOTE: Use the “jar” version of the lib instead of Maven*.
+URLConnection and InputStream used to pull down data should be properly closed and disconnected when finished.
+Retrieved data should be parsed using the built-in JSON classes and converted into custom objects that hold only the required data.
+The network state should be checked before any connections are made. Make sure to test the application by putting the device into airplane mode.
+AsyncTask:
+
+An AsyncTask should be used to facilitate the retrieval of data from the Google Books API.
+The appropriate AsyncTask callback should be used to show an indeterminate ProgressBar before the task begins background operations.
+The appropriate AsyncTask method should be used to pull down data from the Google Books API on a background thread.
+The appropriate AsyncTask callback should be used to hide the shown ProgressBar when the task completes background operations.
+The appropriate AsyncTask callback should be used to update the UI with the retrieved data after the task finishes execution.
+Structure / Efficiency / Format:

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Litter Counting</string>
+    <string name="word_hint">Enter a word to add</string>
+
+</resources>

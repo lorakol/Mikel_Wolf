@@ -1,0 +1,71 @@
+Instructions:
+
+Follow the guidelines/requirements described below in the video, text, and/or images.
+
+Application UI:
+
+UI should contain a single edit field that allows the user to enter a string using the proper text keyboard. Edit field should contain a hint to let the user know what type of data to enter.
+UI should contain two buttons. One button should be labeled to add a string to the collection and the other button should be labeled to view a string from the collection.
+UI should contain text fields for viewing the average length of strings in the collection and viewing the median length of strings in the collection.
+Average and median text fields should be labeled to describe their purpose.
+Average and median text fields should show no more than two decimal places.
+UI should contain a number picker control that allows the user to select a valid index from the underlying collection. Number picker control should limit input to only valid indices.
+Functionality:
+
+Upon clicking the add button, the app should check and make sure a valid string has been entered into the edit field. If a valid string was entered, it should be added to the underlying collection.
+Upon clicking the add button, if a valid string was notentered in the edit field then a toast should be shown stating why it wasn't valid. An entered string is considered invalid if one of the following is true:
+The length of the string is zero. (Nothing was entered)
+The string is made up entirely of spaces. (Length of trimmed string is zero)
+The string already exists in the underlying collection. (Unique strings only)
+Upon clicking the add button, if a valid string was entered then it should be cleared from the edit field after it has been added to the collection.
+Whenever a string is added to or removed from the underlying collection, the UI should be updated to show the average length of all the strings in the collection. (see example below)
+Whenever a string is added to or removed from the underlying collection, the UI should be updated to show the median length of all the strings in the collection. (see example below)
+Upon clicking the button to view a string in the collection, the string that is present at the selected index should be shown in an AlertDialog.
+The AlertDialog that is used to show a selected word should have two buttons. One button should close the dialog. The other button should remove the selected word from the underlying collection.
+Collection Choice:
+
+The collection used to hold the entered data should hold single value elements, not key/value pairs.
+The collection used should be dynamic so that new values can easily be added to the collection.
+The collection used should hold data in sequential order so that all values can easily be accessed via an index.
+Structure / Efficiency / Format:
+
+No warnings (except for Lint) are present when a code inspection is run.
+Each Java file contains the comment header described earlier in this document.
+All text visible to the user is stored in the appropriate resource file.
+All class names should begin with an uppercase letter.
+All method and variable names should begin with a lowercase letter.
+A custom class name should indicate what object it represents. (e.g. Person, Book, NetworkAsyncTask, BookAdapter) Never start the class name with “my” or “custom.”
+A variable name should indicate how they will be used and / or what type they contain.
+(e.g. peopleList, userInput, averageNum, outerJsonObj)
+A method name should indicate what action they perform and / or what they return.
+(e.g. getFirstName, calculateAverage, validateInput)
+All accessed views should have an ID that is named to represent what the view will be used for. (e.g. naming the addition button "button_addition")
+Code blocks performing the same or similar operations should be moved into a single helper / utility method (pass unique data as arguments).
+No wasted memory due to extra or needless variables.
+No wasted computation time due to needless operations.
+Automatic zero for associating methods with click events in the layout XML.
+Extra Information
+
+Below is an example of how words could be added to the collection and what values should display to the screen.
+
+Add word "hello":
+
+    Average: 5
+
+    Median: 5
+Add word "full":
+
+    Average: 4.5
+
+    Median: 4.5
+Add word "sail":
+
+    Average: 4.33
+
+    Median: 4
+Add word "students":
+
+    Average: 5.25
+
+    Median: 4.5
+Below is a brief video demonstration of the completed application. Please read the instructions for the required specifications of the project.

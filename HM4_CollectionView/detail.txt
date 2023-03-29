@@ -1,0 +1,38 @@
+Instructions:
+
+Follow the guidelines/requirements described below in the video, text, and/or images.
+
+For this synthesis assignment, you will be building a master/detail style application that shows a list and a details view in landscape and a spinner and a details view in portrait mode. Since this is a synthesis assignment, you will be given a more general list of requirements than other assignments and will be expected to build the application using your knowledge of Android instead of following a detailed list of tasks.
+
+Application must properly support both portrait and landscape orientations.
+Selection area should be a spinner in landscape mode and a list in portrait mode.
+List and spinner should be populated with a collection of custom objects.
+The spinner should only show a single line of text to represent an object.
+The list should show multiple data points per custom object through the use of a custom adapter and child item layout.
+Details area can be any non-AdapterView UI items used to display information.
+Clicking on a list item or selecting a spinner item should populate the details view with the appropriate data.
+Details area is populated with the same data, regardless of which AdapterView is showing.
+Do not duplicate the code in multiple places for populating the details area.
+Application must show at least 10 custom objects, with the custom object containing at least 3 members of different data types.
+Structure / Efficiency / Format:
+
+No warnings (except for Lint) are present when a code inspection is run.
+Each Java file contains the comment header described earlier in this document.
+All text visible to the user is stored in the appropriate resource file.
+All class names should begin with an uppercase letter.
+All method and variable names should begin with a lowercase letter.
+A custom class name should indicate what object it represents. (e.g. Person, Book, NetworkAsyncTask, BookAdapter) Never start the class name with “my” or “custom.”
+A variable name should indicate how they will be used and / or what type they contain.
+(e.g. peopleList, userInput, averageNum, outerJsonObj)
+A method name should indicate what action they perform and / or what they return.
+(e.g. getFirstName, calculateAverage, validateInput)
+All accessed views should have an ID that is named to represent what the view will be used for. (e.g. naming the addition button "button_addition")
+Code blocks performing the same or similar operations should be moved into a single helper / utility method (pass unique data as arguments).
+No wasted memory due to extra or needless variables.
+No wasted computation time due to needless operations.
+Automatic zero for associating methods with click events in the layout XML.
+Extra Information
+
+Do notuse the master/detail Android Studio template in building this assignment. That template uses fragments and multiple activities to build the UI and does not conform to the requirements of this assignment. If you use that template, you will receive a zero on this assignment - no exceptions.
+
+Below is a brief video demonstration of the completed application. Please read the instructions for the required specifications of the project.

@@ -1,0 +1,61 @@
+Instructions:
+
+Follow the guidelines/requirements described below in the video, text, and/or images.
+
+Application UI:
+
+UI should show two spinners side-by-side across the top of the screen. Spinners should take up an equal amount of horizontal space and should fill the entire width of the screen.
+Both spinners should be populated with default values using XML properties and resources, not hard-coded strings.
+The first spinner should allow the user to select either "Grid View" or "List View".
+The second spinner should allow the user to select either "Array Adapter", "Simple Adapter", or "Base Adapter".
+The rest of the screen should be taken up by a ListView anda two column GridView. Both views should fill the remaining screen space (all space not occupied by a spinner) but only one of the views should ever being showing at any given time.
+ArrayAdapter list/grid items can use built-in Android views (e.g. android.R.layout.simple_list_item_1) but SimpleAdapter and BaseAdapter list/grid items must be custom views created in your project.
+Adapter Implementations:
+
+Application should be able to display person objects using a stock ArrayAdapter (do not extend this class).
+When showing data from an ArrayAdapter, the list or grid in the app should show only the first and last name of each person as a single line of text.
+Application should be able to display person objects using a stock SimpleAdapter (do not extend this class).
+When showing data from a SimpleAdapter, the list or grid in the app should show two lines of text. The first line should be the person's first and last name. The second line should be the person's birthday.
+Application should be able to display person objects using a custom BaseAdapter (do extend this class).
+When showing data from a BaseAdapter, the list or grid in the app should show two lines of text and an image. The first line should be the person's first and last name. The second line should be the person's birthday. The image should be the picture of the person.
+BaseAdapter properly recycles views and uses the ViewHolder pattern for maximum efficiency.
+Functionality:
+
+Application will contain a collection of 10 custom objects that represent a person. Each person object should contain the following properties with each person having different values for each field:
+First Name
+Last Name
+Birthday
+Picture
+Selecting a view from the first spinner will show either a GridView or a ListView as defined in the Application UI section of this assignment.
+Selecting an adapter type from the second spinner should cause the list or grid, depending on which one is showing at the time, to swap out the type of adapter being used to be the one that was selected as described in the Adapter Implementations section of this assignment.
+Clicking on an item in either the list or the grid should show an AlertDialog with the following values, as retrieved from the selected person regardless of which adapter is being used:
+Dialog Title - First and Last Name
+Dialog Body - Birthday
+Dialog Icon - Picture
+Structure / Efficiency / Format:
+
+No warnings (except for Lint) are present when a code inspection is run.
+Each Java file contains the comment header described earlier in this document.
+All text visible to the user is stored in the appropriate resource file.
+All class names should begin with an uppercase letter.
+All method and variable names should begin with a lowercase letter.
+A custom class name should indicate what object it represents. (e.g. Person, Book, NetworkAsyncTask, BookAdapter) Never start the class name with “my” or “custom.”
+A variable name should indicate how they will be used and / or what type they contain.
+(e.g. peopleList, userInput, averageNum, outerJsonObj)
+A method name should indicate what action they perform and / or what they return.
+(e.g. getFirstName, calculateAverage, validateInput)
+All accessed views should have an ID that is named to represent what the view will be used for. (e.g. naming the addition button "button_addition")
+Code blocks performing the same or similar operations should be moved into a single helper / utility method (pass unique data as arguments).
+No wasted memory due to extra or needless variables.
+No wasted computation time due to needless operations.
+Automatic zero for associating methods with click events in the layout XML.
+Extra Information
+
+When setting images for each person, it is recommended that you find or create small thumbnail images of a person and add those pictures to your drawable or mipmap resources folder. If you have enough people in your class that have pictures on their profiles, feel free to use your classmates' pictures.
+
+When using the pictures in your app, you do not need to go through the process of decoding your images into Bitmap objects. The ImageView class has a method that allows you to set an image based on its resource ID. Use this method to set any images.
+
+Do NOT access public static collections from the custom adapter. Please pass any collection instances by reference through the custom adapter’s constructor. Violating this requirement will result in a zero for the custom adapter feature.
+
+Below is a brief video demonstration of the completed application. Please read the instructions for the required specifications of the project.
+
