@@ -1,0 +1,34 @@
+Instructions:
+
+Follow the guidelines/requirements described below in the video, text, and/or images.
+
+For this assignment, you will be building a news reader application that shows the user random news stories as notifications. This application should contain the following features:
+
+General Functionality:
+
+Application will contain a single activity that contains a single ListFragment that shows a list of saved articles, if saved articles exist.
+Clicking on a saved news article should launch an ACTION_VIEW intent to show the full news article in the default web browser on the device. Do not create a custom web browser activity to handle this intent.
+Upon launch of the application, a unique periodic worker will be scheduled to run every 15 minutes, and execute tasks as described in the “Worker” section.
+Saved articles should persist between application launches using an appropriate storage method (SQLite, JSON, or serializable objects).
+Notification:
+
+Only one notification should be shown at any given time and all notifications should show the elements that are required by all notification objects.
+A single notification "channel" should be added for proper API26+ support.
+Notification should utilize an expanded layout style to show the full details of a news article as text in the notification body.
+Clicking on the notification should launch an ACTION_VIEW activity PendingIntent to show the full news article in the default web browser on the device. Again, do not create a custom web browser activity to handle this intent.
+Notification should contain an action button that allows the user to save the displayed article to the reading list. Clicking the action button will send a broadcast PendingIntent to start a save worker.
+Workers:
+
+Application will contain a unique periodic worker that will be used to download news articles.
+When the unique worker runs, the application should pull down a news feed, select a random article from that feed, and show a notification as described in the Notification section with the random article's details.
+Application will contain a OneTimeWorkRequest used to start the save worker scheduled from the save broadcast (described below).
+The article saving worker, upon being started by the save broadcast, should save the passed in news article using one of the storage options listed under General Functionality, then it should send out an UI refresh broadcast using a custom action name with no data or extras added to the intent.
+Broadcasts:
+
+Application will contain a BroadcastReceiver that is registered in the UI portion of the app.
+This broadcast receiver will listen for the UI refresh broadcast that is being sent from the article saving worker.
+Upon receiving a broadcast, the UI refresh receiver should reload the application's UI to show the newly saved article.
+Application will contain another BroadcastReceiver that is registered in the manifest that listens for ACTION_BOOT_COMPLETED broadcasts.
+The broadcast receiver should schedule the download article worker (don’t forget to use the unique periodic enqueue method to avoid having it scheduled more than once).
+Application will contain another BroadcastReceiver that is registered in the manifest that listens for the custom save article broadcasts.
+The broadcast receiver should schedule the save article worker (don't forget to use the OneTimeWorkRequest).

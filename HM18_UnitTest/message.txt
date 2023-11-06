@@ -1,0 +1,59 @@
+for the second one: Test Cases:
+
+PersonConversionUtil
+getPeopleJSONFromList
+Three Person objects in an ArrayList converted to the appropriate JSON.
+One Person object in an ArrayList converted to the appropriate JSON.
+getPeopleListFromJSON
+JSON of three people converted to an ArrayList of three Person objects.
+JSON of one person converted to an ArrayList of one Person objects.
+PersonFormatUtil
+formatName - FORMAT_FIRST_LAST
+First: "John", Last: "Doe", Output: "John Doe"
+First: "David", Last: "Smith", Output: "David Smith"
+formatName - FORMAT_LAST_FIRST
+First: "John", Last: "Doe", Output: "Doe, John"
+First: "David", Last: "Smith", Output: "Smith, David"
+formatPhoneNumber - FORMAT_ALL_DASHES
+Input: "4075550123" - Output: "407-555-0123"
+Input: "407 555 0123" - Output: "407-555-0123"
+Input "(407)555-0123" - Output: 407-555-0123"
+Input "407-555-0123" - Output: "407-555-0123"
+formatPhoneNumber - FORMAT_WITH_PARENS
+Input: "4075550123" - Output: "(407)555-0123"
+Input: "407 555 0123" - Output: "(407)555-0123"
+Input "(407)555-0123" - Output: "(407)555-0123"
+Input "407-555-0123" - Output: "(407)555-0123"
+formatPhoneNumber - FORMAT_WITH_SPACES
+Input: "4075550123" - Output: "407 555 0123"
+Input: "407 555 0123" - Output: "407 555 0123"
+Input "(407)555-0123" - Output: "407 555 0123"
+Input "407-555-0123" - Output: "407 555 0123"
+unformatPhoneNumber
+Input: "4075550123" - Output: "4075550123"
+Input: "407 555 0123" - Output: "4075550123"
+Input "(407)555-0123" - Output: 4075550123"
+Input "407-555-0123" - Output: "4075550123"
+isPhoneNumberValid - Standard 10 digit
+Input: "4075550123" - Output: true
+Input: "407 555 0123" - Output: true
+Input "(407)555-0123" - Output: true
+Input "407-555-0123" - Output: true
+Input "1-407-555-0123" - Output: false
+Input "40755501234" - Output: false
+Input "407555012" - Output: false
+PersonStorageUtil
+savePerson
+Save out a Person object and verify that it saved properly
+deletePerson
+Save out a Person, load the list, delete the object, load the list, verify that it doesn't exist anymore.
+deletePersonFile
+Save out a Person, delete the file, verify the file doesn't exist.
+PreferenceUtil
+getNameFormat
+Mocking preference value 0 should return FORMAT_FIRST_LAST.
+Mocking preference value 1 should return FORMAT_LAST_FIRST.
+getPhoneFormat
+Mocking preference value 0 should return FORMAT_ALL_DASHES.
+Mocking preference value 1 should return FORMAT_WITH_PARENS.
+Mocking preference value 2 should return FORMAT_WITH SPACES.

@@ -1,0 +1,42 @@
+Instructions:
+
+Follow the guidelines/requirements described below in the video, text, and/or images.
+
+Application UI
+
+Application will contain three activities, each with their own fragment, to show a list, form, and details page.
+Using a WebViewFragment is no longer an option as of API 28. Follow their advice and use a standard support fragment.
+List screen will show a list of data that has been saved in the application. The list on this screen should be implemented using HTML inside of a WebView.
+List screen will show a single ActionBar menu item for adding a new item. When the action item is clicked, the app should transition to the form screen.
+Form screen should show three data entry fields for entering in three pieces of data. The form screen should be implemented using HTML inside of a WebView. At least one data entry field should be of a non-string type.
+Form screen should show a single HTML button for saving a new item. When the button is clicked, the form data should be saved as outlined in the Data Storage section of the assignment and the app should transition back to the list.
+Details screen will show the full details of an item that is selected from the list. Details screen should be implemented using HTML inside of a WebView.
+Details screen should show a single HTML button for deleting the displayed data. When the button is clicked, the displayed data should be deleted as outlined in the Data Storage section of the assignment and the app should transition back to the list.
+List screen should update after a delete or add action has taken place on the form or details screens.
+JavaScript Interfaces
+
+List screen should invoke a method for retrieving the list of links. This can either be HTML prepared on the Android / Java side, or a JSON array parsed by the JS side which generates HTML.
+When the save button is clicked on the form screen, the form data should be passed from JavaScript to Android for storage. The form should then transition back to the list.
+When the delete button is clicked on the details screen, the form should trigger an Android method call to delete the data and transition back to the list using a JavaScript interface object.
+Details screen should populate with data from Android code using a JavaScript interface object.
+Custom Links
+
+All list items shown on the list screen should be wrapped in an <a> tag that points to a custom link.
+Custom link should use a custom schema that is specific to your application.
+Custom link should contain link parameters that hold all data that needs to be passed to the details screen. Examples:
+my-app-schema://details-screen?first=John&last=Doe&age=25
+my-app-schema://details-screen/PrimaryKey/7
+The WebView on the list screen should use a custom WebViewClient in order to override URL loading for the custom schema, parse off the parameters, and transition to the details screen.
+Data Storage
+
+Application saves data entered in HTML on the form screen to a persistent storage location (JSON, serializable, SQLite, etc). No other data should be stored.
+Application should delete matching data when the delete button is pressed on the details screen. Data should only be deleted if all three points of data match.
+All save and delete events are triggered through HTML and JavaScript.
+
+Extra Information:
+
+To handle the difference between API 23- and 24+, implement both of the shouldOverrideUrlLoading methods:
+
+shouldOverrideUrlLoading (WebView view, String url)
+shouldOverrideUrlLoading (WebView view, WebResourceRequest request)
+Don’t forget that as of API 28 that regular (non-support) fragments are deprecated. This includes the WebViewFragment.

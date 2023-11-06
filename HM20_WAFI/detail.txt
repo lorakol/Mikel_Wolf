@@ -1,0 +1,7 @@
+In the Home screen (MainActivity), I have an array of progress bars. Each progress bar represents the comparison between the amount spent on a specific item and the average spent on that item by all users.
+
+For instance, if multiple users, representing different trucks, add "hammer" to their list of items and input the cost, the application should aggregate the spending on hammers for each truck. This aggregated value is then compared to the average spending on hammers across all users.
+
+If a user is the first to input a cost for a particular item, such as a hammer, that cost becomes the baseline average until more users input their costs. As more data is entered, the average is recalculated, and individual spending is compared against this evolving average.
+
+Each progress bar on the Home screen visually displays this comparison for each item, helping users quickly understand how their spending on a particular item compares to the average spending of all users for that item.

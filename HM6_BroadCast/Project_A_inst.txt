@@ -1,0 +1,67 @@
+Instructions:
+
+Follow the guidelines/requirements described below in the video, text, and/or images.
+
+For this assignment, you will be building an application that utilizes a Worker to download images on a background thread and a BroadcastReceiver to update the UI with the newly downloaded images. This application should contain the following features:
+
+Application UI:
+
+Application will contain a single activity and fragment that displays a grid view.
+Grid screen will always start off with an empty grid when opened from the launcher icon. Grid screen will fill out with images based on broadcasts sent from the Worker.
+Grid screen will show an ActionBar menu item to start the download process by starting the Worker described below.
+When showing images, the grid will show a scaled down thumbnail of the image.
+When showing images, clicking on an image will launch an ACTION_VIEW intent to view the full sized image in the built-in Android image viewer application.
+Do not create a custom image viewer activity.
+Worker:
+
+Application will contain a single Worker.
+A OneTimeWorkRequest used to start this worker with the network constraint.
+The worker will loop through an array of 30 image URLs and perform the following functions:
+Check if a local copy of the image already exists.
+If the image already exists, send a broadcast to update the UI and move on to the next image.
+If the image doesn't exist, download the image and save it according to the Storage section of the instructions, then send a broadcast to update the UI.
+Storage:
+
+Downloaded images should be saved using the file names listed below which also correspond to the path portion of the URL used to download the images.
+Images must be saved at full resolution and not decoded in the worker. Images are just made up of bytes so write the bytes you download out to a file directly without decoding the image.
+Image data or file names should not be passed around through a broadcast.
+In the UI portion of this application, image data should only be decoded into a bitmap when it's going to be displayed. Do not hold onto an array or list of Bitmap objects. Instead, have your adapter hold onto a list of File objects, String paths, or URIs that represent the images and only decode them when they're needed.
+Only image data should be stored in this application. You are not permitted to store out a secondary object that tracks where your images are stored. Use your knowledge of the File class in order to access an array of file names.
+Broadcasts:
+
+When an image is downloaded in the Worker, a broadcast should be sent with the purpose of updating the UI.
+A single BroadcastReceiver will be created and registered in the UI of the grid screen to listen for update broadcasts sent from the Worker.
+Upon receiving a broadcast, the grid screen will start showing images as defined in the Application UI section of the instructions. Subsequent broadcasts will cause a refresh of the image collection and UI.
+The update broadcast will consist of a single action name with no extras or other data being added to the intent.
+
+Extra Information:
+
+Image URLs to be used in your application: (copy this into your worker)
+
+private final String URL_BASE = "https://i.imgur.com/";
+
+private final String[] IMAGES = {
+
+"Df9sV7x.jpg", "nqnegVs.jpg", "JDCG1tP.jpg",
+
+"tUvlwvB.jpg", "2bTEbC5.jpg", "Jnqn9NJ.jpg",
+
+"xd2M3FF.jpg", "atWe0me.jpg", "UJROzhm.jpg",
+
+"4lEPonM.jpg", "vxvaFmR.jpg", "NDPbJfV.jpg",
+
+"ZPdoCbQ.jpg", "SX6hzar.jpg", "YDNldPb.jpg",
+
+"iy1FvVh.jpg", "OFKPzpB.jpg", "P0RMPwI.jpg",
+
+"lKrCKtM.jpg", "eXvZwlw.jpg", "zFQ6TwY.jpg",
+
+"mTY6vrd.jpg", "QocIraL.jpg", "VYZGZnk.jpg",
+
+"RVzjXTW.jpg", "1CUQgRO.jpg", "GSZbb2d.jpg",
+
+"IvMKTro.jpg", "oGzBLC0.jpg", "55VipC6.jpg"
+
+};
+
+Note: While downloading images or scrolling the grid, the UI portion of your application is going to be incredibly laggy. This is normal due to the way images are being loaded. If you choose to fix this, do so after all other functionality is implemented as described by the instructions.

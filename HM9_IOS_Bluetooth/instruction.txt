@@ -1,0 +1,26 @@
+Instructions
+
+In this exercise you will be required to create an iOS application that will act as a Bluetooth LE Peripheral. The app should contains 6 buttons and use these buttons to send commands over Bluetooth to my application on your MacBook (acting as the central device). The app will use a single service and a single characteristic whose value must be updated to send the commands. The values used here must be 1-6, one for each button. The central app that runs on your MacBook is provided below. You simply need to make sure your MacBook's Bluetooth radio is turned on (this can be changed in settings) and then run the application. The application can be downloaded from the link below. Hint: Be sure to un-mute your computer when testing to verify that your app is working correctly. 
+
+You are free to set up the UI however you like. The UUID's you'll need are as follows
+
+Service - 06B280C1-419D-4D87-810E-00D88B506717
+Characteristic - CD570797-087C-4008-B692-7835A1246377
+ 
+
+Requirements
+
+Your project must contain the following components:
+
+An iOS app with 6 buttons
+The buttons should ONLY be enabled if the central has successfully subscribed to the characteristic
+A mutable service and characteristic should be used. The characteristic should allow central devices to subscribe to it
+Your device assigned as a peripheral device that connects to my central via Core Bluetooth
+Each button much correspond to a value that your characteristic changes.
+IMPORTANT NOTE: The value here must be a string of the numeric values 1-6. EX: let value = "1"
+ 
+
+Important Requirement Notes
+
+The application must compile and launch on an iOS/iPadOS operating system. This MUST be run on your actual devices, not the simulator as the sim does not have access to your Macbook's Bluetooth radio. Applications that do not compile will not receive credit.
+first app is the one that we will need to interact with. "BluetoonCentralApp"

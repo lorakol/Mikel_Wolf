@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listaudio"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </ListView>
+
+    <!-- Add this ListView below the current ListView in your activity_main.xml -->
+
+    <!-- Add these buttons below the ListView in your activity_main.xml -->
+
+    <ListView
+        android:id="@+id/listDummyClips"
+        android:layout_width="412dp"
+        android:layout_height="209dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaudio" />
+
+    <!-- activity_main.xml -->
+
+    <!-- Add the missing view IDs here -->
+    <LinearLayout
+        android:id="@+id/audioClipContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips">
+
+        <!-- Add the generated dummy audio clips here programmatically -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dummyClipsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips"
+        >
+
+        <!-- Add the dummy clip titles here programmatically -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/trash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dummyClipsLayout" />
+    <!-- ... -->
+
+    <Button
+        android:id="@+id/btnTrimStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+
+        android:layout_marginTop="200dp"
+        android:text="@string/trim_start"
+        android:onClick="onTrimStartButtonClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips"
+         />
+
+    <!-- ... -->
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:onClick="onEditButtonClick"
+        android:text="Edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips" />
+
+    <!-- ... -->
+
+    <Button
+        android:id="@+id/btnTrimEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="32dp"
+        android:text="Trim End"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

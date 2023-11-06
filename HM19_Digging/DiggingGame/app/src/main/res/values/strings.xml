@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DiggingGame</string>
+    <string name="inventory">Inventory</string>
+    <string name="items_found">Items Found</string>
+    <string name="total_gold_0">Total Gold: 0</string>
+</resources>

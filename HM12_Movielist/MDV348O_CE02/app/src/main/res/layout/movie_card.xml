@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="200dp" >
+
+    <ImageView
+        android:id="@+id/bg_img"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="TODO"></ImageView>
+
+
+    <ImageView
+        android:id="@+id/card_img"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        android:contentDescription="TODO"></ImageView>
+
+    <TextView
+        android:id="@+id/title_txt"
+        style="@style/Widget.Leanback.DetailsDescriptionTitleStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Title Text"
+        android:layout_centerHorizontal="true"
+        android:textColor="#A1887F" />
+    <TextView
+        android:id="@+id/description_txt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Description"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="#A1887F" />
+</RelativeLayout>

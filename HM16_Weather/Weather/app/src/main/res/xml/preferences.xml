@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="theme_preference"
+        android:title="Choose Theme"
+        android:defaultValue="light"
+        android:entries="@array/theme_names"
+        android:entryValues="@array/theme_values" />
+
+    <ListPreference
+        android:key="city_preference"
+        android:title="Select City"
+        android:defaultValue="London"
+        android:entries="@array/city_names"
+        android:entryValues="@array/city_values" />
+
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+The application will also contain two widgets which show the images from the device in two different ways.
+The user should be able to select an image from either the app or the widgets to view the full size images in the built-in image viewer app.
+You should start by completing the activity grid display to ensure you can access the images from the provider successfully. After that, creating the stack widget is nearly identical to the list view in the demo except an image is shown instead of text. 
+
+Stack Widget - Application will contain a 3x3 cell non-resizable widget that shows a collection of images as retrieved from the MediaStore provider using a StackView. The user should be able to flip through the images and click on an image to view the full size image in the built-in image viewer app. 
+
+Flipper Widget - Application will contain a 3x3 cell widget that is resizable up to 5x5 cells. The widget should show a collection of images as retrieved from the MediaStore using an AdapterViewFlipper. The widget should contain a configuration activity for selecting whether or not the flipper should auto advance or manual advance. The widget should also contain forward and back buttons to flip between the images manually. Clicking on an image should open the full size image in the built-in image viewer app.
+
+ Application Data - All data in both the application and widget portions should come from the MediaStore provider. Upon requesting a refresh operation in the app, all widget and app data should update to show any new images that were added to the MediaStore. You can test this by taking a picture with the camera to add MediaStore data.	
+
+General Functionality - Application should contain a grid UI that allows the user to view all MediaStore images in a single grid. The user should be able to click a refresh button to update all application data. Clicking on an image in the app should open the full size image in the built-in image viewer app. This functionality should be completed first to ensure that your code for getting data from the media provider is working properly before moving on to the widgets

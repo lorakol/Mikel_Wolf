@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/04_Android/Mikel_Wolf/HM17_AppTester/ApplicationTestingStarter2/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/04_Android/Mikel_Wolf/HM17_AppTester/ApplicationTestingStarter2/app/src/main/res/layout/fragment_details.xml" value="0.18802083333333333" />
+        <entry key="..\:/04_Android/Mikel_Wolf/HM17_AppTester/ApplicationTestingStarter2/app/src/main/res/layout/fragment_form.xml" value="0.18802083333333333" />
+        <entry key="..\:/04_Android/Mikel_Wolf/HM17_AppTester/ApplicationTestingStarter2/app/src/main/res/layout/frgment_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/04_Android/Mikel_Wolf/HM17_AppTester/ApplicationTestingStarter2/app/src/main/res/menu/menu_main.xml" value="0.1765625" />
+        <entry key="..\:/Program/Android/Sdk/platforms/android-33/data/res/layout/simple_list_item_1.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

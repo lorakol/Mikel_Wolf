@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "207282901284",
+    "project_id": "wafi-ca4a3",
+    "storage_bucket": "wafi-ca4a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207282901284:android:73e42fc1343620d165a3b1",
+        "android_client_info": {
+          "package_name": "com.training.wafi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAryAPorDbV_dEQq-WrDHZ0O2VwkcHlng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
